@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPF Calculator - Public Provident Fund Calculator</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/256/Calculator-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+    <section id="PPF1">
+        <div class="container-fluid">
+            <div class="row d-flex align-items-center">
+                <h1>PPF Calculator - Public Provident Fund Calculator</h1>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="card">
+                        <form action="PPFCalculator">
+                            <div class="form-group">
+                                <label for="investment" class="form-label">Yearly investment</label>
+                                <input type="number" id="investment" name="investment" class="form-control"
+                                    placeholder="enter investment amount" min="500" max="150000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time" class="form-label">Time Period(in years)</label>
+                                <input type="number" id="time" name="time" class="form-control" required
+                                    placeholder="enter years">
+                            </div>
+                            <div class="form-group">
+                                <label for="rate" class="form-label">Rate of interest</label>
+                                <input type="number" id="rate" name="rate" class="form-control" value="7.1" disabled
+                                    placeholder="enter interest rate">
+                            </div>
+                            <div class="d-grid d-flex buton">
+                                <button class="btn btn-light" onclick="calculatePPF()" type="button">Calculate</button>
+                                <button class="btn btn-light" onclick="Reset()" type="reset">Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-7 col-12">
+                    <div class="card">
+                        <h3>Results</h3>
+                        <div class="output">
+                            <p>Invested Amount</p>
+                            <p id="firstinvest" class="res">₹ 0</p>
+                            <p>Interest Earned</p>
+                            <p id="TotInt" class="res">₹ 0</p>
+                            <p>Maturity Value</p>
+                            <p id="TotAmt" class="res">₹ 0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="PPF2">
+        <P>
+            Saving money is the first step toward managing wealth. There are many savings account options available to you; however, you should search for those that offer significant returns without taking on any risk. One of the most frequent elements to enter the picture is PPF accounts. The Public Provident Fund (PPF) account is designed to help you invest your hard-earned money.
+            <br>
+            <br>
+            PPF is the best option if you're a responsible parent or new employee looking to save for the future. It can be challenging to calculate the interest rates and returns on your PPF account. Use of the PPF account calculator can simplify these challenging computations.
+        </P>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header bg-light">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  <h5>What is the use of a PPF calculator?</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body" >
+                  <p>One can find the answers to their questions about Public Provident Fund accounts by using this financial instrument. The maturity amount after a specified period of time must be calculated according to a set of rules. It monitors the expansion of your capital. Individuals who now own PPF savings accounts are aware that interest rates fluctuate every month.
+                    <br>
+                    <br>
+                    These days, it's simpler to monitor shifting rates. However, account holders now find it simpler to learn about monthly interest fluctuations thanks to the development of the public provident fund calculator. Many user-friendly PPF calculators are available on the market; however, this is the best option for selecting reliable ones.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item" >
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  <h5>The formula for figuring out PPF</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <p>Formula to calculate interest, the amount deposited, etc. The following formula has been provided:</p>
+
+                    <h5>F = P [({(1+i) ^n}-1)/i]</h5>
+
+                    <p>The variables shown by this formula are as follows:</p>
+                    
+                    <table class="table table-hover w-25">
+                        <tbody>
+                          <tr>
+                            <th scope="row">I</th>
+                            <td>Rate of interest</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">F</th>
+                            <td>Maturity of PPF</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">N</th>
+                            <td>Total number of years</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">P</th>
+                            <td>Annual instalments</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    
+                    <p>To help you understand how PPF calculation works, an example is provided. Purchasing a PPF calculator facilitates this computation.</p>
+
+                    <p>If someone invests Rs. 1,50,000 a year for 15 years at a 7.1% interest rate in PPF, at the end of the investment term, their maturity amount will be Rs. 40,68,209 at closure.</p>
+
+                    <p>You will undoubtedly benefit from a brief review of the opening and closing balances, the amount withheld, the interest rate, and the withdrawal amount. Examine the table that is provided below.</p>
+
+                    <table class="table table-striped table-hover w-100">
+                        <thead>
+                            <tr>
+                              <th scope="col">Year</th>
+                              <th scope="col">Opening amount</th>
+                              <th scope="col">Deposit</th>
+                              <th scope="col">Rate of interest</th>
+                              <th scope="col">Closing amount</th>
+                              <th scope="col">Loan</th>
+                              <th scope="col">Amount withdrawn</th>
+                            </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>0</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.11400</td>
+                            <td>Rs.161400</td>
+                            <td>0</td>
+                            <td>0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Rs.161400</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.23666</td>
+                            <td>Rs.335066</td>
+                            <td>0</td>
+                            <td>0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Rs.335066</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.36865</td>
+                            <td>Rs.521931</td>
+                            <td>Rs.40350</td>
+                            <td>0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>Rs.521931</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.51067</td>
+                            <td>Rs.722998</td>
+                            <td>Rs.83767</td>
+                            <td>0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>Rs.722998</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.66348</td>
+                            <td>Rs.939346</td>
+                            <td>Rs.130483</td>
+                            <td>0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>Rs.939346</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.82790</td>
+                            <td>Rs.1172136</td>
+                            <td>Rs.180750</td>
+                            <td>0</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>Rs.1172136</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.100482</td>
+                            <td>Rs.1422618</td>
+                            <td>0</td>
+                            <td>Rs.260966</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td>Rs.1422618</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.119519</td>
+                            <td>Rs.1692137</td>
+                            <td>0</td>
+                            <td>Rs.361499</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9</th>
+                            <td>Rs.1692137</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.140002</td>
+                            <td>Rs.1982139</td>
+                            <td>0</td>
+                            <td>Rs.469673</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">10</th>
+                            <td>Rs.1982139</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.162043</td>
+                            <td>Rs.2294182</td>
+                            <td>0</td>
+                            <td>Rs.586068</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Rs.2294182</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.185758</td>
+                            <td>Rs.2629940</td>
+                            <td>0</td>
+                            <td>Rs.711309</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">11</th>
+                            <td>Rs.2629940</td>
+                            <td>Rs.150000</td>
+                            <td>Rs.211275</td>
+                            <td>Rs.2991215</td>
+                            <td>0</td>
+                            <td>Rs.846069</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    <p>With the help of the PPF calculator, monthly computations are now feasible in addition to annual ones.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item"  style="background-color: transparent;">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  <h5>How to use PPF calculator?</h5>
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p>You must comprehend how this computer equipment functions if you want to get the most out of it. Its accurate and user-friendly information makes it a worthwhile investment. The user's only task is to enter data into designated columns, after which they are ready to proceed. Tenure, total amount invested, interest earned, and amount invested either monthly or annually are among the details that must be entered into this PPF amount calculator.</p>
+
+                  <ul>
+                    <li>The total maturity amount will be displayed in a matter of seconds once the amounts have been entered in the required fields.</li>
+                    <li>When a single person deposits money on April 1st, interest is computed according to the fiscal year. This interest rate could be impacted by inflation.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                    <h5>Benefits of use a PPF calculator</h5>
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <p>The advantages of utilizing an online PPF calculator are listed below. Examine it now.</p>
+  
+                    <ul>
+                      <li>With the use of this computing gadget, customers can determine with clarity how much interest can be made on an investment of a given sum of money.</li>
+                      <li>This calculator can help you avoid having to pay a large amount of tax.</li>
+                      <li>Determining the maturity period of an investment might be a challenging task, but it can be effortlessly resolved by utilizing PPF calculator India</li>
+                      <li>Additionally, it provides an estimate of the overall investment for a fiscal year.</li>
+                      <li>The computer equipment must be supplied with the deposited amount and deposit type (variable or fixed) in order for the user to receive an accurate result.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </section>
+    </main>
+    <footer class="text-center">
+        <p>&copy2024 | Design by Mukesh | All Right Reserved.</p>
+    </footer>
+    <!-- div class="container">
+        <h1></h1>
+        <form action="" id="PPFCalculator">
+            <div>
+                <label for="investment">Yearly investment</label>
+                <input type="number" id="investment" name="investment" placeholder="Your investment amount" required>
+            </div>
+            <div>
+                <label for="time">Time Period(in years)</label>
+                <input type="number" id="time" name="time" required placeholder="15 years">
+            </div>
+            <div>
+                <label for="rate">Rate of interest</label>
+                <input type="number" id="rate" name="rate" required placeholder="7.1">
+            </div>
+            <div>
+                <button type="button" onclick="calculatePPF()">Calculate</button>
+            </div>    
+            </form>
+        <p id="firstinvest"></p>
+        <p id="TotInt"></p>
+        <p id="TotAmt"></p>
+
+            
+    </div> -->  
+    <script src="/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

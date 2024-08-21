@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, rgb(242, 221, 211), rgba(251, 246, 241));
+}
+
+#PPF1 {
+  margin-top: 40px;
+  width: 100%;
+  min-height: 95vh;
+  padding-left: 140px;
+  padding-right: 180px;
+
+}
+
+#PPF1 h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #515050;
+}
+
+#PPF1 .card {
+  width: 580px;
+  height: 550px;
+  padding: 60px 60px;
+  border-radius: 25px;
+  margin: 0px 40px;
+  border: none;
+  background-color: transparent;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.192);
+}
+
+#PPF1 .card:hover {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3)
+}
+
+
+#PPF1 .form-group {
+  padding: 15px 0px;
+
+}
+
+#PPF1 .form-group label {
+  font-size: 17px;
+  font-weight: 700;
+  color: #515050;
+}
+
+#PPF1 .form-group input {
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-top: 9px;
+  height: 40px;
+  background-color: white;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#PPF1 .buton {
+  justify-content: center;
+  margin-top: 15px;
+
+}
+
+#PPF1 button {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 0px 25px;
+}
+
+#PPF1 button:hover {
+  box-shadow: inset 2px 2px 10px rgb(255, 255, 255)
+}
+
+#PPF1 h3 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  color: #515050;
+}
+
+.output {
+  width: 400px;
+  height: 400px;
+  padding: 30px 30px;
+  color: black;
+  margin-right: 50px;
+}
+
+.output p {
+  font-size: 17px;
+  padding-left: 30px;
+  text-align: center;
+  font-size: 20;
+  font-weight: bold;
+  color: #515050;
+}
+
+.output .res {
+  font-size: 17px;
+  font-weight: 700;
+  color: #515050;
+  padding-left: 10px;
+  text-align: left;
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid transparent;
+  margin-bottom: 35px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+#PPF2 {
+  width: 100%;
+  min-height: 60vh;
+  padding-left: 190px;
+  padding-right: 180px;
+  margin-bottom: 50px;
+}
+
+/* #PPF2 .accordion-item {
+  background-color: transparent;
+  color: #515050;
+  border: none;
+}
+
+#PPF2 .accordion-header{
+  color: #515050;
+}
+.accordion-body {
+  background-color: transparent;
+}
+.accordion-body p{
+  font-size: 17px;
+} */
+#PPF2 p{
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+#PPF2 .accordion {
+  --bs-accordion-btn-bg: #515050;
+  --bs-accordion-active-bg: #515050;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-color: rgb(242, 221, 211);
+  --bs-accordion-active-color: rgb(242, 221, 211);
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-color: none;  
+}
+
+
+
+
+
+
+
+
+/* .container{
+    border: 1px solid white ; border-radius: 10px;
+    padding: 50px 40px;
+    background-color: white; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.192);
+    width: 500px;
+    display: flex; flex-direction: column; text-align: center;
+  }
+  h1{
+    font-size: 29px;
+    color: rgba(0, 123, 255);  
+    margin-bottom: 30px;
+  }
+  .inco{
+    margin-bottom: 20px;
+  }
+  label{
+    display: block;
+    font-weight: bold; font-size: 15px;
+    margin-bottom: 5px;
+  }
+  input{
+     width: 100%;
+     padding: 12px;
+     box-sizing: border-box; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 5px;
+     margin-top: 5px;
+  }
+  button{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 5px;
+    padding: 10px;  
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: rgba(0, 123, 255); color: white;
+  }
+  .checked {
+    color: blue;
+  } */
